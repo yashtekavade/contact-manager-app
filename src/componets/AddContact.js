@@ -31,7 +31,7 @@ class AddContact extends React.Component {
             />
           </div>
           <div className="field">
-            <label>Name</label>
+            <label>Email</label>
             <input
               type="text"
               name="email"
