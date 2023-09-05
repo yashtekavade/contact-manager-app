@@ -7,6 +7,7 @@ const ContactList = (props) => {
   const deleteContactHandler = (id) => {
     props.getContactId(id);
   };
+
   const renderContactList = props.contacts.map((contact) => {
     return (
       <ContactCard
@@ -16,7 +17,16 @@ const ContactList = (props) => {
       />
     );
   });
-  return <div className="ui celled list">{renderContactList}</div>;
+
+  return (
+    <div class="main">
+      <h2>
+        Contact List
+        <button className="ui button blue right">Add Contact</button>
+      </h2>
+      <div className="ui celled list">{renderContactList}</div>
+    </div>
+  );
 };
 
 export default ContactList;
